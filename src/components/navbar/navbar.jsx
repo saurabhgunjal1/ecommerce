@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import styles from "./navbar.module.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/Logo.png";
 export default function () {
   return (
     <div className={styles.maindiv}>
