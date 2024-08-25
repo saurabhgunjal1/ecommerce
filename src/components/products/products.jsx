@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./products.module.css";
-export default function Products() {
+export default function Products({ hideFilter }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function Products() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.filterdiv}>
+      <div className={styles.filterdiv} style={{ display: hideFilter }}>
         <select>
           <option value="IDEAL FOR">IDEAL FOR</option>
         </select>
@@ -41,26 +41,22 @@ export default function Products() {
           <option value="IDEAL FOR">IDEAL FOR</option>
         </select>
       </div>
-      <div>
-        <div>
-          <div className={styles.productGrid}>
-            {data.length > 0 ? (
-              data.map((product) => (
-                <div key={product.id} className={styles.productCard}>
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className={styles.productimg}
-                  />
-                  <h6>{product.title}</h6>
-                  <p>Sign in or Create an account to see pricing</p>
-                </div>
-              ))
-            ) : (
-              <p>Loading...</p>
-            )}
-          </div>
-        </div>
+      <div className={styles.productGrid}>
+        {data.length > 0 ? (
+          data.map((product) => (
+            <div key={product.id} className={styles.productCard}>
+              <img
+                src={product.image}
+                alt={product.title}
+                className={styles.productimg}
+              />
+              <h6>{product.title}</h6>
+              <p>Sign in or Create an account to see pricing</p>
+            </div>
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </div>
   );
