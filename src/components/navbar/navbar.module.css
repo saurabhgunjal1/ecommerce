@@ -1,0 +1,44 @@
+.maindiv {
+  height: 140px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+
+.container {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containerimg {
+  margin-left: 50px;
+  height: 30px;
+}
+
+.secondnavbar {
+  height: 50px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbaricondiv {
+  /* border: 2px solid black; */
+  display: flex;
+  height: 20px;
+  width: 150px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.navbaricondiv > select {
+  border: none;
+}
